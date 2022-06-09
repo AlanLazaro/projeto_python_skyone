@@ -35,11 +35,11 @@ class Squad:
     def incluir_techlead(self, techlead):
        self.techlead = techlead
 
-print('\n-='*5 + ' Sky.One Solutions ' + '-='*5)
+print('\n'+'-='*5 + ' Sky.One Solutions ' + '-='*5)
 print('Bem vindo ao sistema de cadastro de squads!\n')
 
+squads = []
 while True:
-    squads = []
 
     nome_squad = input('\nNome da Squad: ')
     nome_techlead = input('Nome do teachlead da Squad: ')
@@ -62,7 +62,7 @@ while True:
 
         squad.incluir_dev(dev)
 
-        option = input('\nDeseja adicionar mais uma squad [S/N]: ')
+        option = input('\nDeseja adicionar mais uma Desenvolvedor [S/N]: ')
         if option in 'Nn':
             break
 
@@ -71,12 +71,12 @@ while True:
         break
 
 for squad in squads:
-    print('.'*10 + squad.nome + '.'*10)
+    print('\n'+'.'*17 + squad.nome + '.'*17)
     print(f'TechLead: {squad.techlead.nome}')
-    print('\n ----- Devs do Squad -----')
+    print('\n        ----- Devs do Squad -----')
 
     for dev in squad.devs:
         dev.exibir()
-    print('.'*10 + squad.nome + '.'*10)
-    
-print('\n-='*5 + ' Sky.One Solutions ' + '-='*5)
+    print('.'*17 + squad.nome + '.'*17)
+
+print('-='*5 + ' Sky.One Solutions ' + '-='*5)
